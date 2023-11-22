@@ -1,31 +1,21 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.13;
 
-import "@openzeppelin/contracts@4.9.0/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts@4.9.0/access/Ownable.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC20/ERC20.sol";
 
-// Inherit from ERC20 and Ownable
-contract UniqueToken is ERC20, Ownable {
-    constructor(string memory _name, string memory _symbol, uint256 _initialSupply) ERC20(_name, _symbol) {
-        // Mint initial supply to the owner
-        _mint(_msgSender(), _initialSupply);
+contract FixedToken is ERC20 {
+    address public owner; 
+    constructor() ERC20("FixedToken", "FTK") {
+        owner = msg.sender;
+        _mint(msg.sender, 100000 * (10 ** uint(decimals())));
     }
 
-    // Custom function to mint new tokens
-    function issueTokens(address _to, uint256 _amount) public onlyOwner {
-        // Mint tokens to the recipient
-        _mint(_to, _amount);
+    function mint(address account, uint256 amount) public {
+        require(msg.sender == owner, "You are not the owner of the contract.");
+        _mint(account, amount);
     }
 
-    // Custom function to burn existing tokens
-    function destroyTokens(uint256 _amount) public {
-        // Burn tokens from the sender's account
-        _burn(_msgSender(), _amount);
-    }
-
-    function transfer(address _to, uint256 _value) public override returns (bool success) {
-        // Transfer tokens from sender to recipient
-        _transfer(_msgSender(), _to, _value);
-        return true;
+    function burn(address account, uint256 amount) public {
+        _burn(account, amount);
     }
 }
