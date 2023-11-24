@@ -1,4 +1,4 @@
-*MyToken Solidity Smart Contract
+#MyToken Solidity Smart Contract
 
 A Comprehensive Overview
 This Solidity smart contract seamlessly integrates the ERC-20 token standard with enhanced minting and burning capabilities. Designed for single-owner management, it empowers the owner to mint new tokens and allows token holders to burn their own holdings.
