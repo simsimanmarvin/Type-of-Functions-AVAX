@@ -10,6 +10,7 @@ Minting Authority: Empowers the contract owner to mint new tokens, expanding the
 Burning Mechanism: Grants token holders the ability to burn their tokens, reducing the overall supply.
 
 #Deployment and Interaction
+
 Deploy the contract utilizing Remix or your preferred Ethereum development environment.
 Leverage the provided functions to interact with the contract's functionalities.
 
