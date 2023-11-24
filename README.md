@@ -11,6 +11,8 @@ Minting Authority: Empowers the contract owner to mint new tokens, expanding the
 
 Burning Mechanism: Grants token holders the ability to burn their tokens, reducing the overall supply.
 
+Transfer: Untilization of function of standard ERC-20 so there is no need self-defined fucntion.
+
 #Deployment and Interaction
 
 Deploy the contract utilizing Remix or your preferred Ethereum development environment.
