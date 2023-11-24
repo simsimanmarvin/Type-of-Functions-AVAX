@@ -1,9 +1,9 @@
-#MyToken Solidity Smart Contract
+# Type of Function 
 
 A Comprehensive Overview
 This Solidity smart contract seamlessly integrates the ERC-20 token standard with enhanced minting and burning capabilities. Designed for single-owner management, it empowers the owner to mint new tokens and allows token holders to burn their own holdings.
 
-#Key Features:
+# Key Features:
 
 ERC-20 Standard Adherence: Conforms to the ERC-20 standard, ensuring fungible token functionality.
 
@@ -13,12 +13,12 @@ Burning Mechanism: Grants token holders the ability to burn their tokens, reduci
 
 Transfer: Untilization of function of standard ERC-20 so there is no need self-defined fucntion.
 
-#Deployment and Interaction
+# Deployment and Interaction
 
 Deploy the contract utilizing Remix or your preferred Ethereum development environment.
 Leverage the provided functions to interact with the contract's functionalities.
 
-#Detailed Function Descriptions:
+# Detailed Function Descriptions:
 
 mint(address _to, uint256 _value)
 Exclusively accessible to the contract owner, this function mints new tokens and transfers them to the specified address. The _value parameter dictates the number of tokens to be minted.
